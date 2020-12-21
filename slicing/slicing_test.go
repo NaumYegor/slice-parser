@@ -10,10 +10,10 @@ func TestNewMatrix(t *testing.T) {
 		input         [][]int
 		shouldBeError bool
 	}{
-		{[][]int {{1, 2, 3},
+		{[][]int{{1, 2, 3},
 			{4, 5, 6},
 			{7, 8, 9}}, false},
-		{[][]int {{1, 2, 3},
+		{[][]int{{1, 2, 3},
 			{4, 5, 6},
 			{7, 8, 9, 7},
 			{7, 8, 9}}, true},
@@ -35,17 +35,17 @@ func TestNewMatrix(t *testing.T) {
 
 func TestTransform(t *testing.T) {
 	var tests = []struct {
-		m         Matrix
+		m           Matrix
 		expectedOut []int
 	}{
 		{Matrix{
 			size:   3,
 			slices: [][]int{{1, 2, 3}, {4, 5, 6}, {7, 8, 9}},
-		}, []int {1, 2, 3, 6, 9, 8, 7, 4, 5}},
+		}, []int{1, 2, 3, 6, 9, 8, 7, 4, 5}},
 		{Matrix{
 			size:   4,
 			slices: [][]int{{1, 2, 3, 1}, {4, 5, 6, 4}, {7, 8, 9, 7}, {7, 8, 9, 7}},
-		}, []int {1, 2, 3, 1, 4, 7, 7, 9, 8, 7, 7, 4, 5, 6, 9, 8}},
+		}, []int{1, 2, 3, 1, 4, 7, 7, 9, 8, 7, 7, 4, 5, 6, 9, 8}},
 	}
 
 	for i, test := range tests {

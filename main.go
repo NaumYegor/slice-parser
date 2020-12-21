@@ -7,7 +7,7 @@ import (
 )
 
 func main() {
-	slices := [][]int {
+	slices := [][]int{
 		{100, 15, 27},
 		{30, 40, 207},
 		{400, 400, 1},
